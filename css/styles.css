@@ -1,0 +1,257 @@
+/* Fullscreen background image */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/image/bg_02.jpg'); /* Verifique o caminho */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Send background behind content */
+}
+
+/* Content container */
+.content {
+    position: relative;
+    z-index: 1; /* Position content above background */
+    padding: 20px;
+    color: #333;
+    background: transparent; /* Transparente para ver o fundo */
+}
+
+/* Navbar transparente */
+.navbar {
+    background-color: rgba(255, 255, 255, 0); /* Transparente */
+    box-shadow: none; /* Remove a sombra inicial */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de sombra e fundo após rolar */
+.navbar.scrolled {
+    background-color: #f9fafc; /* Fundo branco semi-transparente */
+    /*box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.nav-link {
+    color: #333 !important; /* Cor dos links */
+    margin-right: 15px;
+}
+
+.nav-link.btn {
+    margin-right: 0; /* Remove margem direita dos botões */
+}
+
+/* Ajustes para os botões na navbar */
+.navbar .nav-item {
+    display: flex; /* Garantir que todos os itens sejam exibidos em linha */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 0 5px; /* Pequena margem entre os itens */
+}
+
+.navbar .nav-item .btn {
+    padding: 5px 15px; /* Ajuste de padding para os botões */
+    margin-right: 0; /* Remover margem direita desnecessária */
+    margin-left: 5px; /* Espaçamento consistente entre botões */
+}
+
+.navbar .nav-item .btn-primary {
+    background-color: var(--primary-color); /* Cor do botão Login */
+    color: var(--primary-color); /* Cor da borda do botão Login */
+}
+
+.navbar .nav-item .btn-outline-primary {
+    border-color: var(--primary-color); /* Borda do botão Sign Up */
+    color: var(--primary-color); /* Cor do texto do botão Sign Up */
+}
+
+.navbar .nav-item .btn-outline-primary:hover {
+    border-color: transparent; /* Borda do botão Sign Up */
+    background: linear-gradient(90deg, rgba(172, 23, 142, 1) 35%, rgba(255, 0, 123, 1) 100%);
+    color: #fff; /* Cor do texto do botão Sign Up */
+}
+
+/* Remove os padding adicionais nos links */
+.navbar .nav-item .nav-link {
+    padding: 0; /* Remove padding dos links */
+    margin: 0; /* Remove margens dos links */
+}
+
+
+/* Main Section Styles */
+.main-section {
+    padding-top: 20vh; /* Espaço abaixo da navbar */
+}
+
+.text-content h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.text-content .highlight {
+    color: var(--primary-color); /* Cor de destaque */
+}
+
+.text-content p {
+    color: #555;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, rgba(172, 23, 142, 1) 35%, rgba(255, 0, 123, 1) 100%);
+    border: none;
+    border-radius: 30px;
+}
+
+.video-content {
+    margin-top: 20px;
+}
+
+.embed-responsive {
+    border-radius: 8px; /* Bordas arredondadas para o vídeo */
+    overflow: hidden;
+}
+
+/* Efeito de blur para a row de funcionalidades */
+.feature-row {
+    position: relative; /* Garante que o backdrop-filter funcione corretamente */
+    background: rgba(255, 255, 255, 0.2); /* Cor de fundo semitransparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    backdrop-filter: blur(2px);
+    /*filter: blur(13px);*/
+    /*box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda para destacar o fundo */
+}
+
+/* Estilo para as colunas de funcionalidades */
+.feature-icon {
+    display: inline-block;
+    padding: 15px;
+}
+
+.feature-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 15px;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+/* Estilo básico para a seção */
+.slick-carousel {
+    margin: 0 auto;
+    max-width: 1000px; /* Largura máxima da galeria */
+}
+
+.slick-slide {
+    display: flex; /* Torna o contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 100%; /* Garante que o slide ocupe a altura total */
+}
+
+.review-card {
+    display: flex; /* Mantém o flex dentro do card */
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Garante que o card ocupe a largura total */
+    padding: 20px;
+    height: auto; /* Ajusta a altura do card */
+}
+
+
+.review-card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+/* Estilo das imagens de usuário */
+.review-card img {
+    border: 3px solid var(--primary-color); /* Borda ao redor da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 80px; /* Tamanho da imagem */
+    height: 80px; /* Tamanho da imagem */
+    object-fit: cover; /* Garante que a imagem se ajuste ao container */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
+}
+
+/* Nome do usuário */
+.review-user {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0; /* Remove margem superior adicional */
+}
+
+/* Texto da avaliação */
+.review-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.slick-slide img {
+    display: block; /* Garante que a imagem ocupe o espaço do container */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+
+
+/* Ajuste de container da galeria */
+.slick-image-carousel {
+    margin: 0 auto;
+    max-width: 1000px; /* Largura máxima da galeria */
+}
+
+/* Estilo das imagens no slider */
+.slick-image-carousel div {
+    padding: 0 10px; /* Adiciona margem interna (espaço) ao redor de cada slide */
+}
+
+.slick-image-carousel img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: block; /* Centraliza a imagem */
+    margin: 0 auto; /* Margem automática para centralizar */
+}
+
+
+
+
+
+/* Responsivo */
+@media (max-width: 767px) {
+    .main-section .row {
+        flex-direction: column;
+    }
+    .video-content {
+        margin-top: 20px;
+    }
+    .feature-row {
+        padding: 20px; /* Ajuste de padding em telas menores */
+    }
+}
+
+/* Definição das variáveis globais */
+:root {
+    --primary-color: #ff007b; /* Cor primária */
+    --secondary-color: #333;  /* Cor secundária, exemplo */
+    --background-color: #f5f5f5; /* Cor de fundo, exemplo */
+}
